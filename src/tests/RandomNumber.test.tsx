@@ -4,12 +4,19 @@ import RandomNumber from "../Components/RandomNumber";
 
 describe("Successful fetch call", () => {
   beforeAll(() => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        status: 200,
-        json: () => Promise.resolve([1]),
-      })
-    ) as jest.Mock;
+    // global.fetch = jest.fn(() =>
+    //   Promise.resolve({
+    //     // status: 200,
+    //     json: () => Promise.resolve([1]),
+    //   })
+    // ) as jest.Mock;
+    jest.spyOn(global, "fetch").mockImplementation(() =>
+        Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve([0])
+        }) as Promise<Response>
+    );
   });
 
   test("Shows a random number", async () => {
