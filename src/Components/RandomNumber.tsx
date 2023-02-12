@@ -3,7 +3,7 @@ import React, {useState, useEffect, SyntheticEvent, useCallback } from "react";
 const randomNumberURL = "http://www.randomnumberapi.com/api/v1.0/random?min=0&max=1000&count=1";
 
 const RandomNumber: React.FC = () => {
-    let [randomNumber, setRandomNumber] = useState();
+    let [randomNumber, setRandomNumber] = useState<number[]|undefined>();
     let [error, setError] = useState(false)
     let [errorMessage, setErrorMessage] = useState("")
 
@@ -11,7 +11,9 @@ const RandomNumber: React.FC = () => {
         setError(false)
         setErrorMessage('')
         try{
+            console.error('fetch', fetch)
             const res = await fetch(randomNumberURL)
+            console.error('res', res )
             if(!res.ok){
                throw new Error("Couldn't get new number")
             }
@@ -23,6 +25,13 @@ const RandomNumber: React.FC = () => {
             setError(true)
             setErrorMessage(err.message)
         }      
+        // await fetch(randomNumberURL).then((res)=> res.json().then((randomNumberArray: number [])=>{
+        //     setRandomNumber(randomNumberArray)
+        //         console.log("randomNum:", randomNumberArray)
+        // })).catch((error)=>{
+        //     setError(true)
+        //     setErrorMessage(error.message)
+        // })
     }, [])
 
     useEffect(()=>{
