@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const Logo = styled.img`
   width: 100%;
   height: auto;
-  max-width: 50vw;
+  max-width: 60vw;
 `
 
 export const Header = styled.div`
@@ -24,7 +24,7 @@ justify-content: flex-start;
 `
 
 export const Greeting = styled.h1`
-  color: #365ebf;
+  color: rgb(53,100,251); 
 `
 
 export const TalkingPointsWrapper = styled.div`
@@ -34,7 +34,7 @@ export const TalkingPointsWrapper = styled.div`
 `
 
 export const Foot = styled.div`
-  background-color: #365ebf;
+  background-color: rgb(53,100,251);
   width: 100vw;
   display: flex;
   justify-content: center;
