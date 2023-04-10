@@ -40,3 +40,18 @@ export const Foot = styled.div`
   justify-content: center;
   font-size: 1.5em
 `
+
+export const CountryListWrapper = styled.div`
+  height: 80vh
+`
+
+export const StyledCountryList = styled.ul`
+  overflow-y: auto;
+  height: 100%;
+  list-style-type: none;
+`
+
+export const StyledCountryListItem = styled.li`
+  margin: 10px;
+  border: 1px solid black;
+`
