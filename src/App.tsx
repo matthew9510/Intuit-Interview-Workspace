@@ -3,23 +3,23 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { Wrapper } from "./Components/Styled";
 import CountryList from "./Components/CountryList";
-// import Login from "./Components/Login";
-// import Home from "./Components/Home";
+import Login from "./Components/Login";
+import Home from "./Components/Home";
 
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Routes,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 const App: React.FC = () => {
 
-  // const [isLoggedIn, setIsLoggedIn] = React.useState(true);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
 
   return (
     <Wrapper>
       <Navbar />
-      {/* <Router>
+      <Router>
         <Routes>
           {isLoggedIn ? (
             <Route path="/" element={<Home />} />
@@ -27,8 +27,8 @@ const App: React.FC = () => {
             <Route path="/login"  element={<Login setIsLoggedIn={setIsLoggedIn} />}/>
           )}
         </Routes>
-      </Router> */}
-      <CountryList />
+      </Router>
+      {/*<CountryList />*/}
       <Footer />
     </Wrapper>
   );

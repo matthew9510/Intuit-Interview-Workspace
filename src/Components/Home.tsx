@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     <MainContent>
       <Greeting>Hello again Intuit, it's a pleasure to be back!</Greeting>
       <TalkingPoints />
-      <RandomNumber />
+      {/*<RandomNumber />*/}
     </MainContent>
   );
 };
