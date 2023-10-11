@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { Wrapper } from "./Components/Styled";
-import CountryList from "./Components/CountryList";
+// import CountryList from "./Components/CountryList";
 import Login from "./Components/Login";
 import Home from "./Components/Home";
 

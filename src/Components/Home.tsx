@@ -1,5 +1,5 @@
 import React from "react";
-import RandomNumber from "./RandomNumber";
+// import RandomNumber from "./RandomNumber";
 import { MainContent, Greeting } from "./Styled";
 import TalkingPoints from "./TalkingPoints";
 
